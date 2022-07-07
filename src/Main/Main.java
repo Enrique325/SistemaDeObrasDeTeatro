@@ -20,7 +20,7 @@ public class Main {
         MenuTeatro menuteatro=new MenuTeatro();
         Controlador controlador=new Controlador(login,registro,menuteatro);
         login.setVisible(true);
-        registro.setVisible(true);
+       //registro.setVisible(true);
     }
     
 }

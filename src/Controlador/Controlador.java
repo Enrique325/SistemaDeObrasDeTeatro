@@ -72,23 +72,37 @@ public class Controlador implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource()==registro.Bt_RegistroUsuario){
+            System.out.println(e.getSource());
+            System.out.println("Entró al registro usuario");
+            registrarUsuario();
+            
+         }
+        
         if(e.getSource()==login.IniciarSesionUsuario){
             iniciarSesionUsuario();
-            System.out.println("1");
+            System.out.println("Hizo el primer if(Se logueó)");
+            System.out.println(e.getSource());
+       
         }
         if(e.getSource()==login.RegistrarUsuario){
             new Registro().setVisible(true);
-       
-            if(e.getSource()==registro.Bt_RegistroUsuario){
-                System.out.println("HSHSH");
-                registrarUsuario();
-                System.out.println("2");
-            }else if(e.getSource()==registro.Bt_RegistroIniciarSesionUsuario){
-                new Login().setVisible(true);
-                System.out.println("3");
-            }
-            System.out.println("4");
+            System.out.println("Hizo el segundo if (desplegar registro)");
+            System.out.println(e.getSource());
+            login.IniciarSesionUsuario.setVisible(false);
+          
         }
+        
+       //Hasta 
+         
+         
+         if(e.getSource()==registro.Bt_RegistroIniciarSesionUsuario){
+                new Login().setVisible(true);
+                System.out.println("Cuarto Inicio Sesión");
+            } 
+        }
+
+    private void disponse() {
+        this.disponse();
     }
-    
 }

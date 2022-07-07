@@ -138,6 +138,9 @@
       </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="RegistroNombreUsuario">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="a"/>
+      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
@@ -151,6 +154,9 @@
       </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="RegistroApellidoUsuario">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="a"/>
+      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
@@ -164,11 +170,17 @@
       </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="RegistroCurpUsuario">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="a"/>
+      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="RegistroContrase&#xf1;aUsuario">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="a"/>
+      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
@@ -185,6 +197,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Registrarse"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Bt_RegistroUsuarioActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>

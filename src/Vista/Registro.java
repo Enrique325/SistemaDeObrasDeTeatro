@@ -59,13 +59,26 @@ public class Registro extends javax.swing.JFrame {
 
         jLabel1.setText("Nombre");
 
+        RegistroNombreUsuario.setText("a");
+
         jLabel2.setText("Apellido");
 
+        RegistroApellidoUsuario.setText("a");
+
         jLabel3.setText("Curp");
+
+        RegistroCurpUsuario.setText("a");
+
+        RegistroContraseñaUsuario.setText("a");
 
         jLabel4.setText("Contraseña");
 
         Bt_RegistroUsuario.setText("Registrarse");
+        Bt_RegistroUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bt_RegistroUsuarioActionPerformed(evt);
+            }
+        });
 
         Bt_RegistroIniciarSesionUsuario.setText("Iniciar sesion");
 
@@ -131,6 +144,11 @@ public class Registro extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Bt_RegistroUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bt_RegistroUsuarioActionPerformed
+        // TODO add your handling code here:
+       // controlador.registro();
+    }//GEN-LAST:event_Bt_RegistroUsuarioActionPerformed
 
     /**
      * @param args the command line arguments

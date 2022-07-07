@@ -49,6 +49,11 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setText("Contraseña");
 
         IniciarSesionUsuario.setText("Ingresar");
+        IniciarSesionUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IniciarSesionUsuarioActionPerformed(evt);
+            }
+        });
 
         RegistrarUsuario.setText("Registrase");
 
@@ -94,6 +99,10 @@ public class Login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void IniciarSesionUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IniciarSesionUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IniciarSesionUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
