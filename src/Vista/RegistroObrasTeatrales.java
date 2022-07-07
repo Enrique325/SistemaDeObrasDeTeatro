@@ -37,9 +37,9 @@ public class RegistroObrasTeatrales extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         btn_GuardarObra = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        txt_actorPrincipalObra = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txt_actorSecundarioObra = new javax.swing.JTextField();
         txt_precioBoleto = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -64,11 +64,11 @@ public class RegistroObrasTeatrales extends javax.swing.JFrame {
 
         btn_GuardarObra.setText("Guardar Obra");
 
-        jTextField1.setText("actorPrincipal");
+        txt_actorPrincipalObra.setText("actorPrincipal");
 
         jLabel7.setText("Actor Secundario:");
 
-        jTextField2.setText("actorSecundario");
+        txt_actorSecundarioObra.setText("actorSecundario");
 
         txt_precioBoleto.setText("precioBoleto");
 
@@ -97,8 +97,8 @@ public class RegistroObrasTeatrales extends javax.swing.JFrame {
                                 .addComponent(jLabel4)
                                 .addGap(18, 18, 18)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1)
-                            .addComponent(jTextField2)
+                            .addComponent(txt_actorPrincipalObra)
+                            .addComponent(txt_actorSecundarioObra)
                             .addComponent(txt_generoObra)
                             .addComponent(txt_nombreObra)
                             .addComponent(txt_resumenObra)
@@ -129,11 +129,11 @@ public class RegistroObrasTeatrales extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txt_actorPrincipalObra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txt_actorSecundarioObra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
@@ -183,7 +183,7 @@ public class RegistroObrasTeatrales extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_GuardarObra;
+    public javax.swing.JButton btn_GuardarObra;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -191,11 +191,11 @@ public class RegistroObrasTeatrales extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField txt_generoObra;
-    private javax.swing.JTextField txt_nombreObra;
-    private javax.swing.JTextField txt_precioBoleto;
-    private javax.swing.JTextField txt_resumenObra;
+    public javax.swing.JTextField txt_actorPrincipalObra;
+    public javax.swing.JTextField txt_actorSecundarioObra;
+    public javax.swing.JTextField txt_generoObra;
+    public javax.swing.JTextField txt_nombreObra;
+    public javax.swing.JTextField txt_precioBoleto;
+    public javax.swing.JTextField txt_resumenObra;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,5 +1,5 @@
 package Modelo;
-
+import Modelo.ObraTeatral;
 import java.util.ArrayList;
 
 public class AdministradorDeObrasTeatrales {

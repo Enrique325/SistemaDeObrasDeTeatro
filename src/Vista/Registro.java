@@ -1,26 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Vista;
 
 import Controlador.Controlador;
 
-
-
-/**
- *
- * @author EnriqueChim
- */
 public class Registro extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Registro
-     */
     public Registro() {
         initComponents();
     }
-
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -38,6 +24,7 @@ public class Registro extends javax.swing.JFrame {
         RegistroContraseñaUsuario = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         Bt_RegistroUsuario = new javax.swing.JButton();
+        btn_RegistroCerrar = new javax.swing.JButton();
         Bt_RegistroIniciarSesionUsuario = new javax.swing.JButton();
 
         jTextArea1.setColumns(20);
@@ -80,12 +67,32 @@ public class Registro extends javax.swing.JFrame {
             }
         });
 
+        btn_RegistroCerrar.setText("Cerrar");
+        btn_RegistroCerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_RegistroCerrarActionPerformed(evt);
+            }
+        });
+
         Bt_RegistroIniciarSesionUsuario.setText("Iniciar sesion");
+        Bt_RegistroIniciarSesionUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bt_RegistroIniciarSesionUsuarioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(127, Short.MAX_VALUE)
+                .addComponent(Bt_RegistroUsuario)
+                .addGap(18, 18, 18)
+                .addComponent(Bt_RegistroIniciarSesionUsuario)
+                .addGap(18, 18, 18)
+                .addComponent(btn_RegistroCerrar)
+                .addGap(24, 24, 24))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -106,12 +113,7 @@ public class Registro extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(RegistroApellidoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(151, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(Bt_RegistroUsuario)
-                .addGap(51, 51, 51)
-                .addComponent(Bt_RegistroIniciarSesionUsuario)
-                .addGap(102, 102, 102))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,7 +140,8 @@ public class Registro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Bt_RegistroUsuario)
-                    .addComponent(Bt_RegistroIniciarSesionUsuario))
+                    .addComponent(Bt_RegistroIniciarSesionUsuario)
+                    .addComponent(btn_RegistroCerrar))
                 .addContainerGap())
         );
 
@@ -146,9 +149,17 @@ public class Registro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Bt_RegistroUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bt_RegistroUsuarioActionPerformed
-        // TODO add your handling code here:
+       
        // controlador.registro();
     }//GEN-LAST:event_Bt_RegistroUsuarioActionPerformed
+
+    private void Bt_RegistroIniciarSesionUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bt_RegistroIniciarSesionUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Bt_RegistroIniciarSesionUsuarioActionPerformed
+
+    private void btn_RegistroCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegistroCerrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_RegistroCerrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,6 +201,7 @@ public class Registro extends javax.swing.JFrame {
     public javax.swing.JTextField RegistroContraseñaUsuario;
     public javax.swing.JTextField RegistroCurpUsuario;
     public javax.swing.JTextField RegistroNombreUsuario;
+    public javax.swing.JButton btn_RegistroCerrar;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLabel3;

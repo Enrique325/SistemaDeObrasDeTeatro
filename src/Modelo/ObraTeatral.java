@@ -4,14 +4,16 @@ public class ObraTeatral {
     private String nombreObra;
     private String generoObra;
     private String resumenObra;
-    private String actoresObra;
+    private String actorPrincipalObra;
+    private String actorSecundarioObra;
     private double precioBoletoObra;
 
-    public ObraTeatral(String nombreObra, String generoObra, String resumenObra, String actoresObra, double precioBoletoObra) {
+    public ObraTeatral(String nombreObra, String generoObra, String resumenObra, String actorPrincipalObra, String actorSecundarioObra, double precioBoletoObra) {
         this.nombreObra = nombreObra;
         this.generoObra = generoObra;
         this.resumenObra = resumenObra;
-        this.actoresObra = actoresObra;
+        this.actorPrincipalObra = actorPrincipalObra;
+        this.actorSecundarioObra = actorSecundarioObra;
         this.precioBoletoObra = precioBoletoObra;
     }
 
@@ -39,12 +41,20 @@ public class ObraTeatral {
         this.resumenObra = resumenObra;
     }
 
-    public String getActoresObra() {
-        return actoresObra;
+    public String getActorPrincipalObra() {
+        return actorPrincipalObra;
     }
 
-    public void setActoresObra(String actoresObra) {
-        this.actoresObra = actoresObra;
+    public void setActorPrincipalObra(String actorPrincipalObra) {
+        this.actorPrincipalObra = actorPrincipalObra;
+    }
+
+    public String getActorSecundarioObra() {
+        return actorSecundarioObra;
+    }
+
+    public void setActorSecundarioObra(String actorSecundarioObra) {
+        this.actorSecundarioObra = actorSecundarioObra;
     }
 
     public double getPrecioBoletoObra() {
@@ -55,9 +65,11 @@ public class ObraTeatral {
         this.precioBoletoObra = precioBoletoObra;
     }
 
+   
+
     @Override
     public String toString() {
-        return "Nombre: " + getNombreObra() + "Género: " + getGeneroObra() + "Resumen: " + getResumenObra() + "Actores: " + getActoresObra() + "Precio Boleto=" + getPrecioBoletoObra();
+        return "Nombre: " + getNombreObra() + "Género: " + getGeneroObra() + "Resumen: " + getResumenObra() + "Actor Principal: " + getActorPrincipalObra()+ "Actor Secundario: "+ getActorSecundarioObra()+ "Precio Boleto: " + getPrecioBoletoObra();
     }
     
     

@@ -7,10 +7,14 @@ package Controlador;
 import Modelo.AdministradorDeUsuario;
 import static Modelo.AdministradorDeUsuario.listaUsuarios;
 import Modelo.ManejoDeArchivos;
+import Modelo.ObraTeatral;
 import Modelo.Usuario;
+import Modelo.AdministradorDeObrasTeatrales;
+import static Modelo.AdministradorDeObrasTeatrales.listaObras;
 import Vista.Login;
 import Vista.MenuTeatro;
 import Vista.Registro;
+import Vista.RegistroObrasTeatrales;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -27,17 +31,21 @@ public class Controlador implements ActionListener{
     Login login=new Login();
     Registro registro=new Registro();
     MenuTeatro menuteatro=new MenuTeatro();
+    RegistroObrasTeatrales registroObrasTeatrales= new RegistroObrasTeatrales();
 
-    public Controlador( Login login, Registro registro, MenuTeatro menuteatro) {
+    public Controlador( Login login, Registro registro, MenuTeatro menuteatro, RegistroObrasTeatrales registrOobrasTeatrales) {
         this.login=login;
         this.menuteatro=menuteatro;
         this.registro=registro;
         this.registro.Bt_RegistroUsuario.addActionListener(this);
         this.registro.Bt_RegistroIniciarSesionUsuario.addActionListener(this);
+        this.registro.btn_RegistroCerrar.addActionListener(this);
         this.login.IniciarSesionUsuario.addActionListener(this);
         this.login.RegistrarUsuario.addActionListener(this);
+        this.registroObrasTeatrales.btn_GuardarObra.addActionListener(this);
+      
     }
-    
+  
     public void iniciarSesionUsuario(){
         String nombre=login.LoginNombreUsuario.getText();
         String contrasenia=login.LoginContraseñaUsuario.getText();
@@ -68,41 +76,56 @@ public class Controlador implements ActionListener{
         
     }
     
+    public void escribirObraTeatral(){
+        try{
+            String nombreObra=registroObrasTeatrales.txt_nombreObra.getText();
+            String generoObra= registroObrasTeatrales.txt_generoObra.getText();
+            String resumenObra = registroObrasTeatrales.txt_resumenObra.getText();
+            String actorPrincipalObra= registroObrasTeatrales.txt_actorPrincipalObra.getText();
+            String actorSecundarioObra= registroObrasTeatrales.txt_actorSecundarioObra.getText();
+            double precioBoletoObra= Double.parseDouble(registroObrasTeatrales.txt_precioBoleto.getText());
+            ObraTeatral obraTeatral= new ObraTeatral(nombreObra,generoObra,resumenObra,actorPrincipalObra,actorSecundarioObra,precioBoletoObra);
+            AdministradorDeObrasTeatrales.listaObras.add(obraTeatral);
+            ManejoDeArchivos.escribirObraTeatral(listaObras);
+        }catch(Exception ex2){
+            JOptionPane.showMessageDialog(null, "Error al guardar obra");
+        }
+    }
+    
     
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource()==registro.Bt_RegistroUsuario){
-            System.out.println(e.getSource());
-            System.out.println("Entró al registro usuario");
-            registrarUsuario();
-            
-         }
-        
+        System.out.println(e.getSource());
+                
         if(e.getSource()==login.IniciarSesionUsuario){
             iniciarSesionUsuario();
             System.out.println("Hizo el primer if(Se logueó)");
             System.out.println(e.getSource());
+            login.dispose();
        
         }
         if(e.getSource()==login.RegistrarUsuario){
+           
             new Registro().setVisible(true);
             System.out.println("Hizo el segundo if (desplegar registro)");
             System.out.println(e.getSource());
-            login.IniciarSesionUsuario.setVisible(false);
-          
+            login.dispose();
         }
+
+        if(e.getSource()==registro.Bt_RegistroUsuario){
+            System.out.println(e.getSource());
+            System.out.println("Entró al registro usuario");
+            registrarUsuario();
+            registro.dispose();
+         }
         
-       //Hasta 
-         
-         
          if(e.getSource()==registro.Bt_RegistroIniciarSesionUsuario){
                 new Login().setVisible(true);
                 System.out.println("Cuarto Inicio Sesión");
+                registro.dispose();
             } 
         }
 
-    private void disponse() {
-        this.disponse();
-    }
+   
 }

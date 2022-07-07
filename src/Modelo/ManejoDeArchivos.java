@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class ManejoDeArchivos {
-    public static ArrayList<Object> listaObras = new ArrayList<Object>();
+   
     
     public static void escribirArchivo(ArrayList<Usuario> listaUsuarios){
         File archivo;
@@ -71,6 +71,36 @@ public class ManejoDeArchivos {
             
         }
         return true;
+    }
+
+    public static void escribirObraTeatral(ArrayList<ObraTeatral> listaObras) {
+        File archivo;
+        FileWriter escribir;
+        PrintWriter linea;
+        archivo=new File("Obra.txt");
+        if (!archivo.exists()) {
+            try {
+                archivo.createNewFile();
+                escribir=new FileWriter(archivo,true);
+                linea=new PrintWriter(escribir);
+                linea.println(listaObras.toString().replace("[","").replace("]", ""));
+                linea.close();
+                escribir.close();
+            } catch (IOException ex) {
+                Logger.getLogger(ManejoDeArchivos.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }else{
+            try {
+                escribir=new FileWriter(archivo,true);
+                linea=new PrintWriter(escribir);
+                linea.println(listaObras.toString().replace("[","").replace("]", ""));
+                linea.close();
+                escribir.close();
+            } catch (IOException ex) {
+                Logger.getLogger(ManejoDeArchivos.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        }
     }
     
     
