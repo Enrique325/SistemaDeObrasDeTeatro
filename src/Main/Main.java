@@ -8,6 +8,7 @@ import Controlador.Controlador;
 import Vista.Login;
 import Vista.MenuTeatro;
 import Vista.Registro;
+import Vista.RegistroObrasTeatrales;
 import Modelo.*;
 import static Modelo.AdministradorDeObrasTeatrales.listaObras;
 
@@ -20,11 +21,10 @@ public class Main {
         Login login=new Login();
         Registro registro=new Registro();
         MenuTeatro menuteatro=new MenuTeatro();
-       // Controlador controlador=new Controlador(login,registro,menuteatro,registrOobrasTeatrales);
+        RegistroObrasTeatrales registroobrasteatrales = new RegistroObrasTeatrales();
+        Controlador controlador=new Controlador(login,registro,menuteatro,registroobrasteatrales);
         login.setVisible(true);
-        ObraTeatral obraPrueba = new ObraTeatral("Name", "Genero", "Probando", "Kike", "Lucho", 1.0);
-        AdministradorDeObrasTeatrales.listaObras.add(obraPrueba);
-        ManejoDeArchivos.escribirObraTeatral(listaObras);
+        
        
        //registro.setVisible(true);
     }

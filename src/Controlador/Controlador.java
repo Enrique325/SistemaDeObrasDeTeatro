@@ -92,6 +92,9 @@ public class Controlador implements ActionListener{
         }
     }
     
+    public void escribirFuncionTeatral(){
+        
+    }
     
 
     @Override
